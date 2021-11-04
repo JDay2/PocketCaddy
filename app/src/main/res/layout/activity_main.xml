@@ -13,6 +13,7 @@
         android:layout_marginEnd="16dp"
         android:background="#A8B6EDA8"
         android:text="HOME SCREEN stats button - takes to new screen search for courses - (drop down menu/auto complete?) favorite/previous courses - drop down menu list of previous courses"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,6 +30,7 @@
         android:layout_marginTop="20dp"
         android:background="#9CA9F6EF"
         android:text="GOLF APP NAME"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,6 +52,7 @@
         android:layout_height="wrap_content"
         android:background="#9CA9F6EF"
         android:text="Drop Down Menu?"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="85dp" />
