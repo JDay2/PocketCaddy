@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/StatsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/SearchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
@@ -48,7 +48,7 @@
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/StatsButton"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
 
     <com.google.android.material.textfield.TextInputEditText
