@@ -3,23 +3,65 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/golf_cropped">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="64dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="317dp"
+        android:layout_marginEnd="32dp"
+
+        android:background="@drawable/roundedbuttons"
+        android:text="Go"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="410dp"
+        android:layout_height="41dp"
+        android:background="#74A9F6EF"
+        android:gravity="center"
+        android:text="Search for New Courses"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
-        android:text="insert stuff from group map app"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="60dp"
+        android:text="auto complete for typing in names?"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="64dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="16dp"
+
+        android:background="@drawable/roundedbuttons"
+        android:text="Go"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="testw"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="132dp" />
+        android:text="reminder to self: add stuff from golf course search app"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="379dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

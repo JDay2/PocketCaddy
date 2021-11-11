@@ -10,10 +10,10 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="#9CA9F6EF"
+        android:layout_width="415dp"
+        android:layout_height="80dp"
+        android:background="#65A9F6EF"
+        android:gravity="center"
         android:text="GOLF APP NAME"
         android:textColor="#000000"
         android:textSize="34sp"
