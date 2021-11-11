@@ -2,6 +2,8 @@ package edu.highpoint.golfapp2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
+import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -27,8 +29,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
+        View decorView= getWindow().getDecorView();
+        int uiOptions=View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+      //  ActionBar actionBar=getActionBar();
+       // actionBar.hide();
        /* ButtonFindYardage = (Button) findViewById(R.id.ButtonFindYardage);
         ButtonNext = (Button) findViewById(R.id.ButtonNext);
         ButtonPrev = (Button) findViewById(R.id.ButtonPrev);
