@@ -9,7 +9,7 @@ import android.view.Window;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button ButtonFindYardage;
+    /*Button ButtonFindYardage;
     Button ButtonNext;
     Button ButtonPrev;
     EditText DistanceOut;
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     double lon1;
     double lat1;
     double lat2;
-    double lon2;
+    double lon2; */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        ButtonFindYardage = (Button) findViewById(R.id.ButtonFindYardage);
+       /* ButtonFindYardage = (Button) findViewById(R.id.ButtonFindYardage);
         ButtonNext = (Button) findViewById(R.id.ButtonNext);
         ButtonPrev = (Button) findViewById(R.id.ButtonPrev);
         DistanceOut = (EditText) findViewById(R.id.DistanceOut);
@@ -41,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
                 != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(MainActivity.this,new String[]{
                     Manifest.permission.ACCESS_FINE_LOCATION
-            }, 100);
+            }, 100);  */
         }
 
-        Hole = 1; //set to first hole
+       /* Hole = 1; //set to first hole
         Distance = 0;  //distance to 0
         LabelHole.setText("Hole " + Hole.toString());  //label set to hole 1
 
@@ -111,11 +111,11 @@ public class MainActivity extends AppCompatActivity {
             Hole+=1;
             LabelHole.setText("Hole " + Hole.toString());
             /*DistanceOut.setText("NADA");*/
-        }
-    }
+    //    }
+   // }
 
     //decrements hole down to 1
-    public void PrevHole(View view){
+/*    public void PrevHole(View view){
         if(Hole>1){
             Hole=Hole-1;
             LabelHole.setText("Hole " + Hole.toString());
@@ -126,5 +126,5 @@ public class MainActivity extends AppCompatActivity {
     public void goToSearch(View view){
         Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
-    }
+    } */
 }

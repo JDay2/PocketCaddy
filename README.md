@@ -11,7 +11,7 @@ Rebecca Korn
 
 HOME SCREEN
 stats button - takes to new screen
-search for courses - (drop down menu/auto complete?)
+search for courses - auto complete
 favorite/previous courses - drop down menu list of previous courses
 
 ON COURSE SCREEN
@@ -33,3 +33,7 @@ STATS SCREEN (from home)
 putting accuracy - left/right/distance
 driving accuracy - left/right/distance
 accuracy per club
+
+Name for app:
+PocketCaddy
+Yard Bard
