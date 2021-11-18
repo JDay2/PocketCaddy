@@ -7,21 +7,57 @@
     android:background="@drawable/golf_cropped">
 
     <Button
+        android:id="@+id/downButton"
+        android:layout_width="64dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="56dp"
+        android:onClick="goDown"
+        android:background="@drawable/roundedbuttons"
+        android:text="-"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/upButton"
+        android:layout_width="64dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="136dp"
+        android:onClick="goUp"
+        android:background="@drawable/roundedbuttons"
+        android:text="+"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="#598BE8A0"
+        android:text="How far do you want to go for a round of golf?"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
         android:id="@+id/button2"
         android:layout_width="64dp"
         android:layout_height="51dp"
-        android:layout_marginTop="317dp"
         android:layout_marginEnd="32dp"
 
         android:background="@drawable/roundedbuttons"
         android:text="Go"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        tools:layout_editor_absoluteY="508dp" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="410dp"
+        android:layout_width="0dp"
         android:layout_height="41dp"
         android:background="#74A9F6EF"
         android:gravity="center"
@@ -35,33 +71,41 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="259dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="264dp"
+        android:background="#598BE8A0"
         android:text="auto complete for typing in names?"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="64dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="16dp"
-
-        android:background="@drawable/roundedbuttons"
-        android:text="Go"
-        app:backgroundTint="@null"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#598BE8A0"
         android:text="reminder to self: add stuff from golf course search app"
+        android:textSize="20sp"
         tools:layout_editor_absoluteX="37dp"
         tools:layout_editor_absoluteY="379dp" />
+
+    <EditText
+        android:id="@+id/editSqMi"
+        android:layout_width="109dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="miles"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="143dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

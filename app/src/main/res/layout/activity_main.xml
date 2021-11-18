@@ -10,7 +10,7 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="415dp"
+        android:layout_width="0dp"
         android:layout_height="80dp"
         android:background="#65A9F6EF"
         android:gravity="center"
@@ -67,7 +67,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
-        android:layout_width="406dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
         android:layout_marginTop="150dp"
         android:background="#598BE8A0"
