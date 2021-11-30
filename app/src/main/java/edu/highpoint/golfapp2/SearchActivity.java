@@ -26,28 +26,27 @@ public class SearchActivity extends AppCompatActivity{
         editsqmi.setText(sqmi.toString());
     }
 
-
     public void goUp(View view){
 
-        int sqmi=Integer.parseInt(editsqmi.getText().toString());
+        Integer sqmi=Integer.parseInt(editsqmi.getText().toString());
 
         if(sqmi<100)
             sqmi++;
         else if(sqmi>100)
             sqmi=99;
 
-        editsqmi.setText(sqmi); //should be sqmi.toString() but that is bugging for some reason
+        editsqmi.setText(sqmi.toString());
     }
 
     public void goDown(View view){
 
-        int sqmi=Integer.parseInt(editsqmi.getText().toString());
+        Integer sqmi=Integer.parseInt(editsqmi.getText().toString());
 
         if(sqmi>1)
             sqmi--;
         else if(sqmi<1)
             sqmi=1;
 
-        editsqmi.setText(sqmi); //should be sqmi.toString() but that is bugging for some reason
+        editsqmi.setText(sqmi.toString());
     }
 }
