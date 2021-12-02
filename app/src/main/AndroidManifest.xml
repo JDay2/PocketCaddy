@@ -23,6 +23,7 @@
             android:name=".SearchActivity"
             android:parentActivityName="MainActivity">
         </activity>
+
     </application>
 
 </manifest>
