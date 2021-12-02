@@ -14,7 +14,7 @@
         android:layout_height="80dp"
         android:background="#65A9F6EF"
         android:gravity="center"
-        android:text="GOLF APP NAME"
+        android:text="Pocket Caddy"
         android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"

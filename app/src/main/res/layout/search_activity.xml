@@ -51,6 +51,7 @@
 
         android:background="@drawable/roundedbuttons"
         android:text="Go"
+        android:textStyle="bold"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="508dp" />
