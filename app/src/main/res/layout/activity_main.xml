@@ -25,32 +25,31 @@
         android:id="@+id/StatsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/roundedbuttons"
-        android:text="Stats"
+        android:onClick="goToStats"
+        android:text="View Your Stats/Log Practice"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:onClick="goToStats"
         app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
+        app:layout_constraintTop_toBottomOf="@+id/SearchButton" />
 
     <Button
         android:id="@+id/SearchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/roundedbuttons"
         android:onClick="goToSearch"
-        android:text="play golf"
+        android:text="play a round of golf"
         android:textStyle="bold"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintStart_toEndOf="@+id/StatsButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
 
     <com.google.android.material.textfield.TextInputEditText

@@ -1,5 +1,6 @@
 package edu.highpoint.golfapp2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -48,5 +49,10 @@ public class SearchActivity extends AppCompatActivity{
             sqmi=1;
 
         editsqmi.setText(sqmi.toString());
+    }
+
+    public void searchCourses(View view){
+        Intent intent = new Intent(this, SearchCourses.class);
+        startActivity(intent);
     }
 }

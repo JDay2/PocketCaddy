@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GolfApp2</string>
+    <string name="title_activity_search_courses">SearchCourses</string>
 </resources>

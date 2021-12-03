@@ -32,7 +32,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToSearch(View view){
-        Intent intent = new Intent(this, SearchActivity.class);
+       Intent intent = new Intent(this, SearchActivity.class);
+
+        //if they have selected something from the drop down, go straight to OnCourse, if not go to SearchActivity
+
+
+
         startActivity(intent);
     }
     public void goToStats(View view){
