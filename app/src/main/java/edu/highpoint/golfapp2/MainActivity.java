@@ -125,9 +125,13 @@ public class MainActivity extends AppCompatActivity {
             //DistanceOut.setText("NADA");
         }
     }
-
+*/
     public void goToSearch(View view){
         Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
-    } */
+    }
+    public void goToStats(View view){
+        Intent intent = new Intent(this, StatsActivity.class);
+        startActivity(intent);
+    }
 }
