@@ -14,6 +14,13 @@ public class StatsActivity extends AppCompatActivity {
 
     public void calcStats(View view){
         Intent intent = new Intent(this, StatsFinalActivity.class);
+
+        //send data (if any)
+
+
         startActivity(intent);
+    }
+    public void enterShot(View view){
+        //reset the radio buttons, send data to database
     }
 }
