@@ -11,19 +11,7 @@ import android.view.Window;
 
 public class MainActivity extends AppCompatActivity {
 
-    /*Button ButtonFindYardage;
-    Button ButtonNext;
-    Button ButtonPrev;
-    EditText DistanceOut;
-    EditText LabelHole;
-    LocationManager locationManager;
 
-    Integer Hole;
-    double Distance;
-    double lon1;
-    double lat1;
-    double lat2;
-    double lon2; */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +20,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToSearch(View view){
-       Intent intent = new Intent(this, SearchActivity.class);
+
+        Intent intent;
 
         //if they have selected something from the drop down, go straight to OnCourse, if not go to SearchActivity
+        if(/*dropdown is used*/false)
+            intent = new Intent(this, OnCourseActivity.class);
 
-
+       intent = new Intent(this, SearchActivity.class);
 
         startActivity(intent);
     }

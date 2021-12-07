@@ -10,7 +10,19 @@ public class OnCourseActivity extends AppCompatActivity {
         setContentView(R.layout.stats_activity);
     }
 
+/*Button ButtonFindYardage;
+    Button ButtonNext;
+    Button ButtonPrev;
+    EditText DistanceOut;
+    EditText LabelHole;
+    LocationManager locationManager;
 
+    Integer Hole;
+    double Distance;
+    double lon1;
+    double lat1;
+    double lat2;
+    double lon2; */
 
     //  ActionBar actionBar=getActionBar();
     // actionBar.hide();
