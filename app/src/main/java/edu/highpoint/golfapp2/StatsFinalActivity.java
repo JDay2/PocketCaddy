@@ -11,4 +11,8 @@ public class StatsFinalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats_final);
     }
+
+    private void rotateArrow(){
+        
+    }
 }
