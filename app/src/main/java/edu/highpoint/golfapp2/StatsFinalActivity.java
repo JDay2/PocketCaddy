@@ -13,6 +13,6 @@ public class StatsFinalActivity extends AppCompatActivity {
     }
 
     private void rotateArrow(){
-        
+
     }
 }

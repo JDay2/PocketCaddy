@@ -63,4 +63,7 @@ public class StatsActivity extends AppCompatActivity {
             offTarget.setChecked(false);
         }
     }
+    public void openPopUp(){
+
+    }
 }
