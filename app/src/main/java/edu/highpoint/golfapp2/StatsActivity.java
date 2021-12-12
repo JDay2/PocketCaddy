@@ -10,10 +10,26 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class StatsActivity extends AppCompatActivity {
+    private DBHandler dbHandler;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.stats_activity);
+
+        //initialize vars
+        RadioButton left = (RadioButton) findViewById(R.id.leftButton);
+        RadioButton right = (RadioButton) findViewById(R.id.rightButton);
+        RadioButton thin = (RadioButton) findViewById(R.id.thinButton);
+        RadioButton chunky = (RadioButton) findViewById(R.id.chunkyButton);
+        RadioButton curve = (RadioButton) findViewById(R.id.curveButton);
+        RadioButton offTarget = (RadioButton) findViewById(R.id.offTargetButton);
+        boolean leftOrRight=false;
+
+        dbHandler = new DBHandler(StatsActivity.this);
+
+
+
+
     }
 
     public void calcStats(View view){
@@ -25,15 +41,12 @@ public class StatsActivity extends AppCompatActivity {
     }
     public void enterShot(View view) {
 
-        RadioButton left = (RadioButton) findViewById(R.id.leftButton);
-        RadioButton right = (RadioButton) findViewById(R.id.rightButton);
-        RadioButton thin = (RadioButton) findViewById(R.id.thinButton);
-        RadioButton chunky = (RadioButton) findViewById(R.id.chunkyButton);
-        RadioButton curve = (RadioButton) findViewById(R.id.curveButton);
-        RadioButton offTarget = (RadioButton) findViewById(R.id.offTargetButton);
-        boolean leftOrRight=false;
 
-        if (left.isChecked()) {
+// open FBdatabase app , open main activity, model the entershot function after the Onclick function
+//dont forget to add conditions, if no button clicked then assume good shot, if off target then curve or
+//started off must be pushed to record the shot
+
+      /*  if (left.isChecked()) {
             //send data
             left.setChecked(false);
             leftOrRight=true;
@@ -65,7 +78,7 @@ public class StatsActivity extends AppCompatActivity {
             curve.setChecked(false);
             offTarget.setChecked(false);
             Toast.makeText(StatsActivity.this, "Cannot enter shot.", Toast.LENGTH_SHORT).show();
-        }
+        } */
     }
     public void openPopUp(View view){
 

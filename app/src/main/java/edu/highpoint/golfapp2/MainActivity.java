@@ -23,10 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent;
 
-        //if they have selected something from the drop down, go straight to OnCourse, if not go to SearchActivity
-        if(/*dropdown is used*/false)
-            intent = new Intent(this, OnCourseActivity.class);
-
        intent = new Intent(this, SearchActivity.class);
 
         startActivity(intent);
