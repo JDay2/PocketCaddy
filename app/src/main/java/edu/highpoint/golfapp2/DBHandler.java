@@ -9,6 +9,8 @@ import android.graphics.Path;
 
 import java.util.ArrayList;
 
+
+//database given in solo project modified for golf shots
 public class DBHandler extends SQLiteOpenHelper {
     // creating a constant variables for our database.
     // below variable is for our database name.

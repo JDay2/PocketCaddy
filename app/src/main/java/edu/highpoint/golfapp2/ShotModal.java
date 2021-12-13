@@ -2,12 +2,14 @@ package edu.highpoint.golfapp2;
 
 import android.graphics.Path;
 
+import java.lang.reflect.Type;
+
 public class ShotModal {
     // variables for our coursename,
     // description, tracks and duration, id.
     private String Direction;
-    private String solid;
-    private String type;
+    private String Solid;
+    private String Type;
     private int id;
 
     // creating getter and setter methods
@@ -21,20 +23,20 @@ public class ShotModal {
 
 
     public String getSolid() {
-        return solid;
+        return Solid;
     }
 
     public void setSolid(String solid) {
-        this.solid = solid;
+        this.Solid = solid;
     }
 
 
     public void setType(String type) {
-        this.type = type;
+        this.Type = type;
     }
 
     public String getType() {
-        return type;
+        return Type;
     }
 
 
@@ -47,9 +49,9 @@ public class ShotModal {
     }
 
     // constructor
-    public ShotModal(String Direction, String solid, String type) {
+    public ShotModal(String Direction, String Solid, String Type) {
         this.Direction = Direction;
-        this.solid = solid;
-        this.type = type;
+        this.Solid = Solid;
+        this.Type = Type;
     }
 }

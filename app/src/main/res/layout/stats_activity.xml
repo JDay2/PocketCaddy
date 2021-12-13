@@ -61,7 +61,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#1B5E20"
-            android:buttonTint="#1B5E20" />
+            android:buttonTint="#1B5E20"
+            android:onClick="setCurve"/>
 
         <RadioButton
             android:id="@+id/offTargetButton"
@@ -69,7 +70,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#1B5E20"
-            android:buttonTint="#1B5E20" />
+            android:buttonTint="#1B5E20"
+            android:onClick="setOffTarget"/>
     </RadioGroup>
 
     <RadioGroup
@@ -88,7 +90,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#1B5E20"
-            android:buttonTint="#1B5E20" />
+            android:buttonTint="#1B5E20"
+            android:onClick="setThin"/>
 
         <RadioButton
             android:id="@+id/chunkyButton"
@@ -96,7 +99,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#1B5E20"
-            android:buttonTint="#1B5E20" />
+            android:buttonTint="#1B5E20"
+            android:onClick="setChunky"/>
     </RadioGroup>
 
     <TextView
@@ -184,7 +188,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#1B5E20"
-            android:buttonTint="#1B5E20" />
+            android:buttonTint="#1B5E20"
+            android:onClick="setLeft"/>
 
         <RadioButton
             android:id="@+id/rightButton"
@@ -192,7 +197,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#1B5E20"
-            android:buttonTint="#1B5E20" />
+            android:buttonTint="#1B5E20"
+            android:onClick="setRight"/>
     </RadioGroup>
 
     <ImageButton
