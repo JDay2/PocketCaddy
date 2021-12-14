@@ -1,5 +1,6 @@
 package edu.highpoint.golfapp2;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.FragmentActivity;
@@ -14,6 +15,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -27,7 +29,10 @@ public class SearchCourses extends FragmentActivity implements OnMapReadyCallbac
     double Distance;
     double lat;
     double lon;
+    public static final String name="";
+    public static final String location="";
 
+    String clickID = "", oldClickID = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +68,10 @@ public class SearchCourses extends FragmentActivity implements OnMapReadyCallbac
       SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
               .findFragmentById(R.id.map);
        mapFragment.getMapAsync(this);
+
     }
+
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -88,14 +96,35 @@ public class SearchCourses extends FragmentActivity implements OnMapReadyCallbac
             Distance = Distance *60 *1.1515;
 
 
-            if(Distance<=radius)
+            if(Distance<=radius) {
                 mMap.addMarker(new MarkerOptions().position(courses.get(i)).title(titles.get(i)));
+
+
+                mMap.setOnMarkerClickListener(marker -> {
+                    clickID = marker.getId();
+                    if(clickID.matches(oldClickID)){
+                        Intent a = new Intent(this,OnCourseActivity.class);
+                        a.putExtra(name, (Serializable) marker.getTitle());
+                        a.putExtra(location, marker.getPosition());
+                        startActivity(a);
+                    }
+
+                    oldClickID=clickID;
+
+                    return false;
+                });
+
+
+            }
             else
                 mMap.addMarker(new MarkerOptions().position(courses.get(i)).title(titles.get(i)).visible(false));
 
         }
 
     }
+
+
+
 
 
     private double deg2rad(double deg) {

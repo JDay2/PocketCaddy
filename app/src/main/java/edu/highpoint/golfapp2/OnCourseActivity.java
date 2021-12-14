@@ -1,16 +1,24 @@
 package edu.highpoint.golfapp2;
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
-public class OnCourseActivity extends AppCompatActivity {
+public class OnCourseActivity extends AppCompatActivity implements LocationListener {
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.stats_activity);
-    }
-
-/*Button ButtonFindYardage;
+    Button ButtonFindYardage;
     Button ButtonNext;
     Button ButtonPrev;
     EditText DistanceOut;
@@ -22,39 +30,54 @@ public class OnCourseActivity extends AppCompatActivity {
     double lon1;
     double lat1;
     double lat2;
-    double lon2; */
+    double lon2;
 
-    //  ActionBar actionBar=getActionBar();
-    // actionBar.hide();
-       /* ButtonFindYardage = (Button) findViewById(R.id.ButtonFindYardage);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.stats_activity);
+
+        ButtonFindYardage = (Button) findViewById(R.id.ButtonFindYardage);
         ButtonNext = (Button) findViewById(R.id.ButtonNext);
         ButtonPrev = (Button) findViewById(R.id.ButtonPrev);
         DistanceOut = (EditText) findViewById(R.id.DistanceOut);
         LabelHole = (EditText) findViewById(R.id.LabelHole);
 
+        Intent a = getIntent();
+        String title = a.getStringExtra(SearchCourses.name);
+        String location = a.getStringExtra(SearchCourses.location);
+        System.out.println(title);
+        System.out.println(location);
+
 
         //Runtime Permissions makes sure you can access location
-        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
+
+        if (ContextCompat.checkSelfPermission(OnCourseActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(MainActivity.this,new String[]{
+            ActivityCompat.requestPermissions(OnCourseActivity.this,new String[]{
                     Manifest.permission.ACCESS_FINE_LOCATION
-            }, 100);  */
+            }, 100);
 
-       /* Hole = 1; //set to first hole
-        Distance = 0;  //distance to 0
-        LabelHole.setText("Hole " + Hole.toString());  //label set to hole 1
+            Hole = 1; //set to first hole
+            Distance = 0;  //distance to 0
+            LabelHole.setText("Hole " + Hole.toString());  //label set to hole 1
 
 
-        //here is where hardcoded holes were but i assume we are going to do some type of database
-        //probably including all of the courses in nc
+
+
+        }
 
     }
+
+
+
+    //  ActionBar actionBar=getActionBar();
+    // actionBar.hide();
 
     @SuppressLint("MissingPermission")
     private void getLocation() {
         try {
             locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5, MainActivity.this);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5, OnCourseActivity.this);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -69,8 +92,8 @@ public class OnCourseActivity extends AppCompatActivity {
 
         getLocation();
 
-        double theta = lon1 - data[Hole].lon2;
-        Distance = Math.sin(deg2rad(lat1)) *  Math.sin(deg2rad(data[Hole].lat2)) + Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(data[Hole].lat2)) * Math.cos(deg2rad(theta));
+        double theta = lon1 - lon2;
+        Distance = Math.sin(deg2rad(lat1)) *  Math.sin(deg2rad(lat2)) + Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.cos(deg2rad(theta));
         Distance = Math.acos(Distance);
         Distance = rad2deg(Distance);
         Distance = Distance *60 *1.1515;
@@ -106,18 +129,18 @@ public class OnCourseActivity extends AppCompatActivity {
         if(Hole<=17){
             Hole+=1;
             LabelHole.setText("Hole " + Hole.toString());
-            /*DistanceOut.setText("NADA");*/
-    //    }
-    // }
+            DistanceOut.setText("NADA");
+        }
+     }
 
     //decrements hole down to 1
-/*    public void PrevHole(View view){
+   public void PrevHole(View view){
         if(Hole>1){
             Hole=Hole-1;
             LabelHole.setText("Hole " + Hole.toString());
             //DistanceOut.setText("NADA");
         }
     }
-*/
+
 
 }
