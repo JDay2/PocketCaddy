@@ -9,29 +9,29 @@
 
 
     <Button
-        android:id="@+id/downButton"
+        android:id="@+id/buttonDown"
         android:layout_width="64dp"
         android:layout_height="51dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/roundedbuttons"
-        android:onClick="goDown"
+        android:onClick="down"
         android:text="-"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
-        android:id="@+id/upButton"
+        android:id="@+id/buttonUp"
         android:layout_width="64dp"
         android:layout_height="51dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/roundedbuttons"
-        android:onClick="goUp"
+        android:onClick="up"
         android:text="+"
         app:backgroundTint="@null"
-        app:layout_constraintEnd_toStartOf="@+id/downButton"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDown"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
@@ -49,16 +49,16 @@
         android:id="@+id/button2"
         android:layout_width="64dp"
         android:layout_height="51dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="84dp"
 
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="164dp"
         android:background="@drawable/roundedbuttons"
-        android:onClick="searchCourses"
+        android:onClick="toMap"
         android:text="Go"
         android:textStyle="bold"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/downButton" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonDown" />
 
     <TextView
         android:id="@+id/textView3"
@@ -74,24 +74,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="259dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="264dp"
-        android:background="#598BE8A0"
-        android:text="auto complete for typing in names?"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
     <EditText
-        android:id="@+id/editSqMi"
+        android:id="@+id/editsqmi"
         android:layout_width="109dp"
         android:layout_height="45dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="144dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,10 +89,10 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="156dp"
         android:text="miles"
-        app:layout_constraintStart_toEndOf="@+id/editSqMi"
+        app:layout_constraintStart_toEndOf="@+id/editsqmi"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,16 +19,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void goToSearch(View view){
 
-        Intent intent;
-
-       intent = new Intent(this, SearchActivity.class);
-
-        startActivity(intent);
-    }
     public void goToStats(View view){
         Intent intent = new Intent(this, StatsActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToSearch(View view) {
+        Intent intent;
+
+        intent = new Intent(this, SearchActivity.class);
+
         startActivity(intent);
     }
 }
