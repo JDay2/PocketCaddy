@@ -22,11 +22,11 @@ public class StatsActivity extends AppCompatActivity {
 
     private DBHandler dbHandler;
     boolean leftBool = false;
-    boolean rightBool;
-    boolean thinBool;
-    boolean chunkyBool;
-    boolean curveBool;
-    boolean offTargetBool;
+    boolean rightBool = false;
+    boolean thinBool = false;
+    boolean chunkyBool = false;
+    boolean curveBool = false;
+    boolean offTargetBool = false;
 
 
     private RadioGroup LRRadioGroup;
@@ -58,7 +58,7 @@ public class StatsActivity extends AppCompatActivity {
 
     public void calcStats(View view){
 
-        Intent intent = new Intent(this, StatsFinalActivity.class);
+        Intent intent = new Intent(StatsActivity.this, StatsFinalActivity.class);
         startActivity(intent);
     }
 
@@ -115,7 +115,7 @@ public class StatsActivity extends AppCompatActivity {
             Solid ="S";    // s indicates the shot was solid
 
 
-        if(Direction=="S"){
+        if(Direction.equals("S")){
             Type = "S";      // enters the shot as an "S" regardless of selection if not selected off target
         } else if(curveBool){
             Type = "C";   //C indicates that the shot curved left or right of target
@@ -130,6 +130,12 @@ public class StatsActivity extends AppCompatActivity {
         LRRadioGroup.clearCheck();
         TCRadioGroup.clearCheck();
         CSRadioGroup.clearCheck();
+        leftBool = false;
+        rightBool =false;
+        thinBool = false;
+        chunkyBool = false;
+        curveBool = false;
+        offTargetBool = false;
 
         Toast.makeText(StatsActivity.this, "Shot Entered", Toast.LENGTH_SHORT).show();
 

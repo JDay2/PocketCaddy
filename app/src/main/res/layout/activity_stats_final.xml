@@ -60,7 +60,7 @@
         app:srcCompat="@drawable/gradient" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/arrow"
         android:layout_width="132dp"
         android:layout_height="140dp"
         android:layout_marginTop="53dp"
