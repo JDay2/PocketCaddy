@@ -36,4 +36,3 @@ accuracy per club
 
 Name for app:
 PocketCaddy
-Yard Bard
